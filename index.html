@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>albums</title>
+<title>Drake Album Covers – albums</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -122,7 +122,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">albums</h1>
+<h1 class="title">Drake Album Covers</h1>
 </div>
 
 
@@ -139,8 +139,42 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This is a Quarto website.</p>
-<p>To learn more about Quarto websites visit <a href="https://quarto.org/docs/websites" class="uri">https://quarto.org/docs/websites</a>.</p>
+<p>Select an album from the dropdown below to display its cover art:</p>
+<div style="margin: 20px 0;">
+  <label for="albumSelect" class="form-label" style="font-weight: bold; margin-bottom: 8px; display: block;">Choose an Album:</label>
+  <select id="albumSelect" class="form-select" style="max-width: 450px; padding: 8px; font-size: 16px;">
+    <option value="data/2006_room_for_improvement.jpg">Room for Improvement (2006)</option>
+    <option value="data/2007_comeback_season.jpg">Comeback Season (2007)</option>
+    <option value="data/2009_so_far_gone.jpg">So Far Gone (2009)</option>
+    <option value="data/2010_thank_me_later.jpg">Thank Me Later (2010)</option>
+    <option value="data/2011_take_care.jpg" selected="">Take Care (2011)</option>
+    <option value="data/2013_nothing_was_the_same.jpg">Nothing Was the Same (2013)</option>
+    <option value="data/2015_if_youre_reading_this_its_too_late.jpg">If You’re Reading This It’s Too Late (2015)</option>
+    <option value="data/2015_what_a_time_to_be_alive.jpg">What a Time to Be Alive (2015)</option>
+    <option value="data/2016_views.jpg">Views (2016)</option>
+    <option value="data/2017_more_life.jpg">More Life (2017)</option>
+    <option value="data/2018_scorpion.jpg">Scorpion (2018)</option>
+    <option value="data/2019_care_package.jpg">Care Package (2019)</option>
+    <option value="data/2020_dark_lane_demo_tapes.jpg">Dark Lane Demo Tapes (2020)</option>
+    <option value="data/2021_certified_lover_boy.jpg">Certified Lover Boy (2021)</option>
+    <option value="data/2022_honestly_nevermind.jpg">Honestly, Nevermind (2022)</option>
+    <option value="data/2022_her_loss.jpg">Her Loss (2022)</option>
+    <option value="data/2023_for_all_the_dogs.jpg">For All the Dogs (2023)</option>
+    <option value="data/2025_some_sexy_songs_4_u.jpg">$ome $exy $ongs 4 U (2025)</option>
+  </select>
+</div>
+
+<div style="margin-top: 24px;">
+  <img id="albumDisplay" src="data/2011_take_care.jpg" alt="Album Cover" style="max-width: 450px; width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); display: block;">
+</div>
+
+<script>
+  const selector = document.getElementById('albumSelect');
+  const image = document.getElementById('albumDisplay');
+  selector.addEventListener('change', function() {
+    image.src = this.value;
+  });
+</script>
 
 
 
@@ -218,7 +252,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/JonasNoury9\.github\.io\/albums\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

@@ -9,8 +9,8 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "albums",
+    "title": "Drake Album Covers",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "Select an album from the dropdown below to display its cover art:\n\n  Choose an Album:\n  \n    Room for Improvement (2006)\n    Comeback Season (2007)\n    So Far Gone (2009)\n    Thank Me Later (2010)\n    Take Care (2011)\n    Nothing Was the Same (2013)\n    If You’re Reading This It’s Too Late (2015)\n    What a Time to Be Alive (2015)\n    Views (2016)\n    More Life (2017)\n    Scorpion (2018)\n    Care Package (2019)\n    Dark Lane Demo Tapes (2020)\n    Certified Lover Boy (2021)\n    Honestly, Nevermind (2022)\n    Her Loss (2022)\n    For All the Dogs (2023)\n    $ome $exy $ongs 4 U (2025)"
   }
 ]
