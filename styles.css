@@ -1,1 +1,105 @@
-/* css styles */
+/* Nightclub atmosphere background */
+body {
+  background: linear-gradient(rgba(10, 10, 22, 0.72), rgba(10, 10, 22, 0.82)),
+              url('data/club_background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #f1f3f5;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Floating album covers background container */
+#floating-covers-bg {
+  position: fixed;
+  top: -10vh;
+  left: 0;
+  width: 100vw;
+  height: 120vh;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+  transition: transform 0.1s ease-out;
+}
+
+.floating-cover {
+  position: absolute;
+  border-radius: 8px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.65);
+  opacity: 0.38;
+  filter: brightness(0.9) contrast(1.1);
+  will-change: transform;
+}
+
+@keyframes floatDrift1 {
+  0% {
+    transform: translateY(125vh) translateX(-20px) rotate(-14deg);
+    opacity: 0;
+  }
+  12% {
+    opacity: 0.4;
+  }
+  88% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(-25vh) translateX(30px) rotate(14deg);
+    opacity: 0;
+  }
+}
+
+@keyframes floatDrift2 {
+  0% {
+    transform: translateY(125vh) translateX(25px) rotate(12deg);
+    opacity: 0;
+  }
+  12% {
+    opacity: 0.36;
+  }
+  88% {
+    opacity: 0.36;
+  }
+  100% {
+    transform: translateY(-25vh) translateX(-35px) rotate(-16deg);
+    opacity: 0;
+  }
+}
+
+/* Header & nav */
+#quarto-header, .navbar {
+  z-index: 100 !important;
+  position: relative;
+}
+
+/* Content positioning above background */
+#quarto-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Headings color */
+h1, h2, h3, h4, h5 {
+  color: #ffffff;
+}
+
+/* Dropdown styling */
+#albumSelect {
+  background: rgba(28, 30, 48, 0.95);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+#albumSelect optgroup, #albumSelect option {
+  background: #181928;
+  color: #ffffff;
+}
+
+/* Style info cards inside index.qmd for dark theme */
+#quarto-content div[style*="background: #f8f9fa"] {
+  background: rgba(28, 30, 48, 0.8) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  color: #f1f3f5 !important;
+}
+
+#quarto-content p[style*="color: #6c757d"] {
+  color: #cbd5e1 !important;
+}
